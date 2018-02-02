@@ -40,3 +40,43 @@ Operasi pada Python :
   sf adalah variable
   shapefile adalah nama class
   Reader adalah nama method
+  
+  Perintah untuk mengambil data perkolom:
+  >>sf.record(n)[n]
+  
+  Perintah untuk melihat isi shapefile:
+  >>a = sf.shape(0)
+  >>dir(a)
+  
+  Untuk melihat type:
+  >> a.shapetype
+  
+  Mencari negara:
+  >> for a in sf.records():
+  >> if a[8] == “indonesia”
+  >> print a
+  
+  Melihat Baris:
+  >> Print i
+  >> i = i + 1
+  
+Cara membaca data kordinat polyline
+
+import shapefile
+jkt1 = shapefile.Reader('jakarta1_indonesia_osm_line')
+jkt1.shapetype
+Output:3 -> Polyline
+
+Cara membaca data kordinat polygon
+
+import shapefile
+jkt2 = shapefile.Reader('jakarta2_indonesia_land_coast')
+jkt2.shapeType
+Output:5 -> Polygon
+
+ Cara membaca data kordinat point
+ import shapefile
+ jkt3 = shapefile.Reader('jakarta3_indonesia_osm_point')
+ jkt3.shapeType
+ Output:1 -> Polygon
+
