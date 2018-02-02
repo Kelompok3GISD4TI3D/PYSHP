@@ -1,3 +1,4 @@
+
 %kelompok 3 D4 TI-3D
 %Aditya Pratama Dharma   1154043
 %Andi Syahjaratu Daur    11540
@@ -19,3 +20,23 @@
 Sebuah "shapefile" biasanya terdiri dari kumpulan file yang berekstensi ".shp", ".shx", ".dbf", dan ekstensi lainnya pada sebuah nama 
 yang sama (e.g., "jalan.*"). Saat penggunaan, shapefile sebenarnya yang rujuk adalah yang berekstensi ".shp", namun file ini tidak lengkap
 dan membutuhkan file lainnya.
+
+\subsection{Retrieve data geospasial}
+ Retrieve data geospasial adalah merupakan suatu cara untuk melakukan select/view, data record dari file dbf dan geometri dari file shp.
+ Dalam pembahasan kali ini Retreive data geospasial yaitu dengan mengambil data vector ESRI/shapefile dibagi 2 terdapat DBF dan SHP. 
+ Terdapat 3 Geometri standar ESRI
+ a.Point
+ b.Poline
+ c.Poligon
+  Penjelasan::
+  Point dalam peta biasanya menunjukan sebuah tempat misalnya restoran
+  Polygon dalam peta biasanya menunjukan sebuah pulau
+  Perbedaan Polygon dan Polyline adalah titik awal dan akhir polygon selalu bertemu sedangkan tidak dengan polyline.
+
+\subsubsection{Operasi pada Python}
+Operasi pada Python :
+  Implementasi Retrieve Data Geospasial dalam python:
+  >>sf = shapefile.Reader(‘namafile.shp’)
+  sf adalah variable
+  shapefile adalah nama class
+  Reader adalah nama method
